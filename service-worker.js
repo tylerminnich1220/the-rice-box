@@ -1,7 +1,7 @@
 // The Rice Box — offline cache
 // Bump CACHE_NAME any time index.html (or these assets) change,
 // so returning visitors pick up the new version instead of a stale cache.
-const CACHE_NAME = 'rice-box-v1';
+const CACHE_NAME = 'rice-box-v6';
 
 const APP_SHELL = [
   './',
