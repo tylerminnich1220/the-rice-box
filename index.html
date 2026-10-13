@@ -998,6 +998,32 @@
     .days-control{ align-items:flex-start; }
   }
 
+  .smoothie-box{
+    position:relative;
+    overflow:hidden;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:24px 20px 22px;
+    margin-bottom:28px;
+  }
+  .smoothie-head h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:19px;
+    margin:0 0 4px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .smoothie-head p{
+    margin:0;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    max-width:62ch;
+  }
+  .smoothie-head .sprig-leaf{ fill:var(--sage); }
+
   .tab-nav{
     display:flex;
     gap:8px;
@@ -1036,6 +1062,13 @@
     border-color:var(--gold);
     color:var(--gold);
     box-shadow:inset 0 -2px 0 var(--gold);
+  }
+  .tab-btn[data-tab="smoothies"]:hover{ border-color:var(--sage); color:var(--sage); }
+  .tab-btn.active[data-tab="smoothies"]{
+    background:var(--sage-soft);
+    border-color:var(--sage);
+    color:var(--sage);
+    box-shadow:inset 0 -2px 0 var(--sage);
   }
   .tab-panel{ display:none; }
   .tab-panel.active{ display:block; }
@@ -1088,6 +1121,7 @@
     <button type="button" class="tab-btn active" data-tab="recipes">Recipes</button>
     <button type="button" class="tab-btn" data-tab="planner">Weekly Planner</button>
     <button type="button" class="tab-btn" data-tab="snacks">Snacking Plan</button>
+    <button type="button" class="tab-btn" data-tab="smoothies">Smoothie Diet</button>
   </nav>
 
   <div class="tab-panel" data-panel="planner">
@@ -1153,6 +1187,17 @@
       </div>
       <ul class="shopping-list" id="snack-shopping-list"></ul>
     </div>
+  </div>
+  </div>
+
+  <div class="tab-panel" data-panel="smoothies">
+  <div class="smoothie-box">
+    <div class="strip-band strip-wave"></div>
+    <div class="smoothie-head">
+      <h2>Strict Smoothie Diet<svg class="sprig" viewBox="0 0 48 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="sprig-stem" d="M 8.0 19.4 L 15.3 17.3 L 22.2 13.8 L 28.4 9.0 L 33.9 3.0 L 38.4 -4.1" stroke-width="1.1" stroke-linecap="round" fill="none"/><ellipse class="sprig-leaf" cx="15.3" cy="17.3" rx="4.2" ry="1.8" transform="rotate(41.8 15.3 17.3)"/><ellipse class="sprig-leaf" cx="15.3" cy="17.3" rx="4.2" ry="1.8" transform="rotate(-74.2 15.3 17.3)"/><ellipse class="sprig-leaf" cx="22.2" cy="13.8" rx="3.9" ry="1.7" transform="rotate(31.1 22.2 13.8)"/><ellipse class="sprig-leaf" cx="22.2" cy="13.8" rx="3.9" ry="1.7" transform="rotate(-84.9 22.2 13.8)"/><ellipse class="sprig-fruit" cx="22.2" cy="17.0" rx="1.6" ry="2.2"/><ellipse class="sprig-leaf" cx="28.4" cy="9.0" rx="3.6" ry="1.5" transform="rotate(20.6 28.4 9.0)"/><ellipse class="sprig-leaf" cx="28.4" cy="9.0" rx="3.6" ry="1.5" transform="rotate(-95.4 28.4 9.0)"/><ellipse class="sprig-leaf" cx="33.9" cy="3.0" rx="3.3" ry="1.4" transform="rotate(10.3 33.9 3.0)"/><ellipse class="sprig-leaf" cx="33.9" cy="3.0" rx="3.3" ry="1.4" transform="rotate(-105.7 33.9 3.0)"/><ellipse class="sprig-fruit" cx="33.9" cy="6.2" rx="1.6" ry="2.2"/><ellipse class="sprig-leaf" cx="38.4" cy="-4.1" rx="3.0" ry="1.2" transform="rotate(0.3 38.4 -4.1)"/><ellipse class="sprig-leaf" cx="38.4" cy="-4.1" rx="3.0" ry="1.2" transform="rotate(-115.7 38.4 -4.1)"/></svg></h2>
+      <p>For days you want everything in liquid form — rotate these to stay calorie- and protein-dense without sitting down to a full plate. Works best short-term, or mixed in alongside solid meals most days, rather than as your only food source long-term.</p>
+    </div>
+    <div class="snack-grid"><div class="snack-card"><p class="snack-time">16 OZ &middot; YOUR BASELINE</p><h3>Classic PB Protein</h3><div class="tags"><span class="tag cal">650 cal</span><span class="tag herb">48g protein</span></div><ul class="snack-ingredients"><li>1 scoop <b>whey protein</b></li><li>4 tbsp <b>peanut butter</b></li><li>10 oz <b>2% milk</b></li><li>Handful of <b>ice</b></li></ul><p class="snack-steps-label">Blend</p><ol class="snack-steps"><li>Add the milk, peanut butter, and protein powder to the blender.</li><li>Blend until smooth, then add ice and blend again until thick.</li></ol></div><div class="snack-card"><p class="snack-time">20 OZ</p><h3>Banana Oat Protein</h3><div class="tags"><span class="tag cal">530 cal</span><span class="tag herb">40g protein</span></div><ul class="snack-ingredients"><li>1 scoop <b>whey protein</b></li><li>1 <b>banana</b></li><li>&frac12; cup <b>rolled oats</b></li><li>10 oz <b>2% milk</b></li><li>Pinch of <b>cinnamon</b></li></ul><p class="snack-steps-label">Blend</p><ol class="snack-steps"><li>Blend the milk, oats, and banana first until the oats break down.</li><li>Add the protein powder and cinnamon and blend until smooth.</li></ol></div><div class="snack-card"><p class="snack-time">16 OZ</p><h3>Berry Greek Yogurt Protein</h3><div class="tags"><span class="tag cal">430 cal</span><span class="tag herb">49g protein</span></div><ul class="snack-ingredients"><li>1 scoop <b>whey protein</b></li><li>1 cup <b>plain Greek yogurt</b></li><li>1 cup <b>strawberries &amp; blueberries</b></li><li>6 oz <b>milk</b></li></ul><p class="snack-steps-label">Blend</p><ol class="snack-steps"><li>Blend the yogurt and milk first to loosen it up.</li><li>Add the berries and protein powder and blend until smooth.</li></ol></div><div class="snack-card"><p class="snack-time">18 OZ</p><h3>Mango Pineapple Protein</h3><div class="tags"><span class="tag cal">335 cal</span><span class="tag herb">27g protein</span></div><ul class="snack-ingredients"><li>1 scoop <b>vanilla whey protein</b></li><li>&frac34; cup <b>mango chunks</b></li><li>&frac34; cup <b>pineapple chunks</b></li><li>&frac12; cup <b>light coconut milk</b></li></ul><p class="snack-steps-label">Blend</p><ol class="snack-steps"><li>Blend the fruit and coconut milk first until smooth.</li><li>Add the protein powder and blend again — a splash of water loosens it if it's too thick.</li></ol></div><div class="snack-card"><p class="snack-time">18 OZ</p><h3>Chocolate PB Banana Protein</h3><div class="tags"><span class="tag cal">580 cal</span><span class="tag herb">43g protein</span></div><ul class="snack-ingredients"><li>1 scoop <b>chocolate whey protein</b></li><li>1 <b>banana</b></li><li>2 tbsp <b>peanut butter</b></li><li>1 tbsp <b>cocoa powder</b></li><li>10 oz <b>2% milk</b></li></ul><p class="snack-steps-label">Blend</p><ol class="snack-steps"><li>Blend the milk, banana, and peanut butter first.</li><li>Add the protein powder and cocoa and blend until thick and smooth.</li></ol></div></div>
   </div>
   </div>
 
